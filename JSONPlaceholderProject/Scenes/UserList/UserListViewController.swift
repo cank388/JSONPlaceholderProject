@@ -67,4 +67,13 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedUser = viewModel.users[indexPath.row]
+        let detailViewModel = UserListDetailViewModel(user: selectedUser)
+        let storyboard = UIStoryboard(name: "UserListDetail", bundle: nil)
+        let detailViewController = storyboard.instantiateViewController(identifier: "UserListDetailViewController") as! UserListDetailViewController
+        detailViewController.viewModel = detailViewModel
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
