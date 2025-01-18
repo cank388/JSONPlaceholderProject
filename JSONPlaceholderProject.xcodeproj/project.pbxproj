@@ -16,6 +16,9 @@
 		8BA2EA7B2D3C2B5200EAAABD /* JSONPlaceholderProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EA7A2D3C2B5200EAAABD /* JSONPlaceholderProjectTests.swift */; };
 		8BA2EA852D3C2B5200EAAABD /* JSONPlaceholderProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EA842D3C2B5200EAAABD /* JSONPlaceholderProjectUITests.swift */; };
 		8BA2EA872D3C2B5200EAAABD /* JSONPlaceholderProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EA862D3C2B5200EAAABD /* JSONPlaceholderProjectUITestsLaunchTests.swift */; };
+		8BA2EA992D3C2CE900EAAABD /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EA982D3C2CE900EAAABD /* UserListViewController.swift */; };
+		8BA2EA9B2D3C2D0D00EAAABD /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EA9A2D3C2D0D00EAAABD /* UserListViewModel.swift */; };
+		8BA2EA9D2D3C2D8A00EAAABD /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA2EA9C2D3C2D8A00EAAABD /* UserList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8BA2EA802D3C2B5200EAAABD /* JSONPlaceholderProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONPlaceholderProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA2EA842D3C2B5200EAAABD /* JSONPlaceholderProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderProjectUITests.swift; sourceTree = "<group>"; };
 		8BA2EA862D3C2B5200EAAABD /* JSONPlaceholderProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8BA2EA982D3C2CE900EAAABD /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		8BA2EA9A2D3C2D0D00EAAABD /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		8BA2EA9C2D3C2D8A00EAAABD /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 		8BA2EA942D3C2C6500EAAABD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8BA2EA9E2D3C2E6000EAAABD /* Models */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -147,8 +154,34 @@
 		8BA2EA952D3C2C6E00EAAABD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8BA2EA972D3C2CD100EAAABD /* UserListDetail */,
+				8BA2EA962D3C2CB000EAAABD /* UserList */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8BA2EA962D3C2CB000EAAABD /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				8BA2EA982D3C2CE900EAAABD /* UserListViewController.swift */,
+				8BA2EA9A2D3C2D0D00EAAABD /* UserListViewModel.swift */,
+				8BA2EA9C2D3C2D8A00EAAABD /* UserList.storyboard */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		8BA2EA972D3C2CD100EAAABD /* UserListDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserListDetail;
+			sourceTree = "<group>";
+		};
+		8BA2EA9E2D3C2E6000EAAABD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA2EA702D3C2B5200EAAABD /* LaunchScreen.storyboard in Resources */,
+				8BA2EA9D2D3C2D8A00EAAABD /* UserList.storyboard in Resources */,
 				8BA2EA6D2D3C2B5200EAAABD /* Assets.xcassets in Resources */,
 				8BA2EA6B2D3C2B5000EAAABD /* Main.storyboard in Resources */,
 			);
@@ -283,8 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA2EA682D3C2B5000EAAABD /* ViewController.swift in Sources */,
+				8BA2EA992D3C2CE900EAAABD /* UserListViewController.swift in Sources */,
 				8BA2EA642D3C2B5000EAAABD /* AppDelegate.swift in Sources */,
 				8BA2EA662D3C2B5000EAAABD /* SceneDelegate.swift in Sources */,
+				8BA2EA9B2D3C2D0D00EAAABD /* UserListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
