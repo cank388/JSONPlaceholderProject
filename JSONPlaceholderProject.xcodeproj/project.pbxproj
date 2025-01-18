@@ -99,8 +99,9 @@
 		8BA2EA622D3C2B5000EAAABD /* JSONPlaceholderProject */ = {
 			isa = PBXGroup;
 			children = (
-				8BA2EA632D3C2B5000EAAABD /* AppDelegate.swift */,
-				8BA2EA652D3C2B5000EAAABD /* SceneDelegate.swift */,
+				8BA2EA952D3C2C6E00EAAABD /* Scenes */,
+				8BA2EA942D3C2C6500EAAABD /* Network */,
+				8BA2EA932D3C2BAD00EAAABD /* App */,
 				8BA2EA672D3C2B5000EAAABD /* ViewController.swift */,
 				8BA2EA692D3C2B5000EAAABD /* Main.storyboard */,
 				8BA2EA6C2D3C2B5200EAAABD /* Assets.xcassets */,
@@ -125,6 +126,29 @@
 				8BA2EA862D3C2B5200EAAABD /* JSONPlaceholderProjectUITestsLaunchTests.swift */,
 			);
 			path = JSONPlaceholderProjectUITests;
+			sourceTree = "<group>";
+		};
+		8BA2EA932D3C2BAD00EAAABD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8BA2EA632D3C2B5000EAAABD /* AppDelegate.swift */,
+				8BA2EA652D3C2B5000EAAABD /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8BA2EA942D3C2C6500EAAABD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8BA2EA952D3C2C6E00EAAABD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
