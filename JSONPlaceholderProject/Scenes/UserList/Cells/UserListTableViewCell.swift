@@ -15,13 +15,12 @@ class UserListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    func configure(with user: User) {
-        userNameLabel.text = user.username
-        nameLabel.text = user.name
-        emailLabel.text = user.email
+    
+    func configure(with viewModel: UserListTableViewModel) {
+        userNameLabel.text = viewModel.username
+        nameLabel.text = viewModel.name
+        emailLabel.text = viewModel.email
     }
     
 }
