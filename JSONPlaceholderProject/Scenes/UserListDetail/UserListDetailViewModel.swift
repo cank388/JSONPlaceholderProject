@@ -8,13 +8,38 @@
 import Foundation
 
 protocol UserListDetailViewModelProtocol {
-    var user: User { get }
+    var username: String { get }
+    var name: String { get }
+    var email: String { get }
+    var company: String { get }
+    var website: URL { get }
 }
 
 final class UserListDetailViewModel: UserListDetailViewModelProtocol {
-    let user: User
+    private let user: User
     
     init(user: User) {
         self.user = user
     }
+    
+    var username: String {
+        return user.username ?? ""
+    }
+    
+    var name: String {
+        return user.name ?? ""
+    }
+        
+    var email: String {
+        return user.email ?? ""
+    }
+    
+    var company: String {
+        return user.company?.name ?? ""
+    }
+    
+    var website: URL {
+        return URL(string: "https://\(user.website ?? "")")!
+    }
+    
 }

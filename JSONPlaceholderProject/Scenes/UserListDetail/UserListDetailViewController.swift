@@ -9,9 +9,9 @@ import UIKit
 
 final class UserListDetailViewController: UIViewController {
     
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var directToWebsiteButton: UIButton!
     
     var viewModel: UserListDetailViewModelProtocol?
     
@@ -31,14 +31,30 @@ final class UserListDetailViewController: UIViewController {
     }
     
     private func setupViews() {
-        title = "User Detail"
         view.backgroundColor = .systemBackground
     }
     
     private func configureUI() {
         guard let viewModel = viewModel else { return }
-        nameLabel.text = "\(viewModel.user.name ?? "")"
-        emailLabel.text = "\(viewModel.user.email ?? "")"
-        companyLabel.text = "\(viewModel.user.company?.name ?? "")"
+        
+        /// If name is not exist, set the navigation title as "User Detail"
+        if !viewModel.name.isEmpty {
+            self.title = viewModel.name
+        } else {
+            self.title = "User Detail"
+        }
+        emailLabel.text = viewModel.email
+        companyLabel.text = viewModel.company
+        
+        /// If website url is not exist, hide the button
+        if viewModel.website.absoluteString.isEmpty {
+            directToWebsiteButton.isHidden = true
+        }
+    }
+    
+    @IBAction func directToWebsiteButtonTapped(_ sender: UIButton) {
+        if let url = viewModel?.website {
+            UIApplication.shared.open(url)
+        }
     }
 }

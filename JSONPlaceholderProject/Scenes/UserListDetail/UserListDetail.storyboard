@@ -16,76 +16,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="qwS-IX-QaI">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mrr-w7-Fdr">
+                                <rect key="frame" x="0.0" y="69" width="393" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3l-5s-sLC">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="q3g-RC-i4M">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İsim:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zde-UI-80N">
-                                                <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="253"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd6-hV-ivb">
-                                                <rect key="frame" x="35.333333333333343" y="0.0" width="357.66666666666663" height="253"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRw-Lm-dyr">
-                                        <rect key="frame" x="0.0" y="253" width="393" height="253"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="İsim:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPg-2F-9LQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="253"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-5f-mWX">
-                                                <rect key="frame" x="35.333333333333343" y="0.0" width="357.66666666666663" height="253"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7js-va-tQY">
-                                        <rect key="frame" x="0.0" y="506" width="393" height="253"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İsim:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUL-4q-CrG">
-                                                <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="253"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5e3-n3-3Ux">
-                                                <rect key="frame" x="35.333333333333343" y="0.0" width="357.66666666666663" height="253"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qfe-dM-md4">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBU-30-0n3">
+                                                        <rect key="frame" x="8" y="8" width="50" height="34"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vza-3Q-C24">
+                                                        <rect key="frame" x="63" y="8" width="322" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VqB-ur-JXE">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDx-Iy-GK6">
+                                                        <rect key="frame" x="8" y="8" width="82.333333333333329" height="34"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgO-Hw-nNT">
+                                                        <rect key="frame" x="95.333333333333343" y="8" width="289.66666666666663" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="q3g-RC-i4M" secondAttribute="bottom" id="NYe-Gt-gOU"/>
+                                    <constraint firstAttribute="height" constant="100" id="PQE-PA-Gil"/>
+                                    <constraint firstItem="q3g-RC-i4M" firstAttribute="leading" secondItem="Mrr-w7-Fdr" secondAttribute="leading" id="Q27-a4-JKC"/>
+                                    <constraint firstAttribute="trailing" secondItem="q3g-RC-i4M" secondAttribute="trailing" id="mbw-bk-Ny8"/>
+                                    <constraint firstItem="q3g-RC-i4M" firstAttribute="top" secondItem="Mrr-w7-Fdr" secondAttribute="top" id="xSd-R8-4z3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVZ-do-QZ0">
+                                <rect key="frame" x="121.66666666666669" y="189" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2fo-w9-NLL"/>
+                                    <constraint firstAttribute="height" constant="40" id="tyh-OK-JUr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Direct Website">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="directToWebsiteButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FnI-NI-jsD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qwS-IX-QaI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AE7-rH-LKg"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qwS-IX-QaI" secondAttribute="bottom" id="GJV-X6-tuE"/>
-                            <constraint firstItem="qwS-IX-QaI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ZXy-Ie-2Ig"/>
-                            <constraint firstItem="qwS-IX-QaI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tEQ-Oo-Cod"/>
+                            <constraint firstItem="aVZ-do-QZ0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="TpU-8R-HSZ"/>
+                            <constraint firstItem="Mrr-w7-Fdr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fDE-3y-NNv"/>
+                            <constraint firstItem="aVZ-do-QZ0" firstAttribute="top" secondItem="Mrr-w7-Fdr" secondAttribute="bottom" constant="20" id="lMb-r5-p2B"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Mrr-w7-Fdr" secondAttribute="trailing" id="wzG-fN-nUp"/>
+                            <constraint firstItem="Mrr-w7-Fdr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="yHr-cw-QSd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="companyLabel" destination="5e3-n3-3Ux" id="Y2E-Er-RIa"/>
-                        <outlet property="emailLabel" destination="Ekb-5f-mWX" id="wbJ-7d-e0y"/>
-                        <outlet property="nameLabel" destination="fd6-hV-ivb" id="V7K-R0-k8h"/>
+                        <outlet property="companyLabel" destination="LgO-Hw-nNT" id="x6e-7s-O9e"/>
+                        <outlet property="directToWebsiteButton" destination="aVZ-do-QZ0" id="FxQ-QV-mnZ"/>
+                        <outlet property="emailLabel" destination="Vza-3Q-C24" id="mJw-aK-Jgf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,6 +110,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
