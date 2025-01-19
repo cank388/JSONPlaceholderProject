@@ -8,12 +8,30 @@
 import Foundation
 
 // MARK: - NetworkError
-enum NetworkError: Error {
+/// Need equatable for testing
+enum NetworkError: Error, Equatable {
     case invalidURL
     case requestFailed(Error?)
     case invalidResponse
     case decodingFailed(Error)
     case invalidStatusCode(Int)
+    
+    static func == (lhs: NetworkError, rhs: NetworkError) -> Bool {
+        switch (lhs, rhs) {
+        case (.invalidURL, .invalidURL):
+            return true
+        case (.requestFailed(let lhsError), .requestFailed(let rhsError)):
+            return String(describing: lhsError) == String(describing: rhsError)
+        case (.invalidResponse, .invalidResponse):
+            return true
+        case (.decodingFailed(let lhsError), .decodingFailed(let rhsError)):
+            return String(describing: lhsError) == String(describing: rhsError)
+        case (.invalidStatusCode(let lhsCode), .invalidStatusCode(let rhsCode)):
+            return lhsCode == rhsCode
+        default:
+            return false
+        }
+    }
 }
 
 // MARK: - HTTPMethod

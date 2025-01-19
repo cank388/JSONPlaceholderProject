@@ -8,29 +8,84 @@
 import XCTest
 @testable import JSONPlaceholderProject
 
-final class JSONPlaceholderProjectTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+// MARK: - Mock NetworkManager
+class MockNetworkManager: NetworkManagerProtocol {
+    var shouldSucceed = true
+    var mockData: Data?
+    
+    func request<T: Decodable>(_ endpoint: Endpoint, completion: @escaping (Result<T, NetworkError>) -> Void) {
+        if shouldSucceed, let mockData = mockData {
+            do {
+                let decodedData = try JSONDecoder().decode(T.self, from: mockData)
+                completion(.success(decodedData))
+            } catch {
+                completion(.failure(.decodingFailed(error)))
+            }
+        } else {
+            completion(.failure(.requestFailed(nil)))
         }
     }
+}
 
+final class UserRepositoryTests: XCTestCase {
+    var mockNetworkManager: MockNetworkManager!
+    var userRepository: UserRepository!
+    
+    override func setUp() {
+        super.setUp()
+        mockNetworkManager = MockNetworkManager()
+        userRepository = UserRepository(networkManager: mockNetworkManager)
+    }
+    
+    override func tearDown() {
+        mockNetworkManager = nil
+        userRepository = nil
+        super.tearDown()
+    }
+    
+    func testFetchUsersSuccess() {
+        // Given
+        let expectation = XCTestExpectation(description: "Fetch users successfully")
+        let mockUser = User(id: 123, name: "Test User", username: "testuser", email: "test@test.com",
+                          address: nil, phone: nil, website: nil, company: nil)
+        let mockUsers = [mockUser]
+        mockNetworkManager.mockData = try? JSONEncoder().encode(mockUsers)
+        mockNetworkManager.shouldSucceed = true
+        
+        // When
+        userRepository.fetchUsers { result in
+            // Then
+            switch result {
+            case .success(let users):
+                XCTAssertEqual(users.count, 1)
+                XCTAssertEqual(users.first?.name, "Test User")
+                XCTAssertEqual(users.first?.email, "test@test.com")
+            case .failure(let error):
+                XCTFail("Expected success but got error: \(error)")
+            }
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
+    }
+    
+    func testFetchUsersFailure() {
+        // Given
+        let expectation = XCTestExpectation(description: "Fetch users failure")
+        mockNetworkManager.shouldSucceed = false
+        
+        // When
+        userRepository.fetchUsers { result in
+            // Then
+            switch result {
+            case .success:
+                XCTFail("Expected failure but got success")
+            case .failure(let error):
+                XCTAssertEqual(error, .requestFailed(nil))
+            }
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
+    }
 }

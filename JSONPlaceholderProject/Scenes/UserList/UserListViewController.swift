@@ -25,7 +25,7 @@ final class UserListViewController: UIViewController {
         viewModel.fetchUsers()
     }
     
-    init(viewModel: UserListViewModelProtocol = UserListViewModel()) {
+    init(viewModel: UserListViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
