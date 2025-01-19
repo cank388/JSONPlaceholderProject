@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol UserListViewControllerDelegate: AnyObject {
+    func userListViewController(_ controller: UserListViewController, didSelectUser user: User)
+}
+
 final class UserListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var viewModel: UserListViewModelProtocol!
+    weak var delegate: UserListViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,10 +76,6 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let selectedUser = viewModel.users[indexPath.row]
-        let detailViewModel = UserListDetailViewModel(user: selectedUser)
-        let storyboard = UIStoryboard(name: "UserListDetail", bundle: nil)
-        let detailViewController = storyboard.instantiateViewController(identifier: "UserListDetailViewController") as! UserListDetailViewController
-        detailViewController.viewModel = detailViewModel
-        navigationController?.pushViewController(detailViewController, animated: true)
+        delegate?.userListViewController(self, didSelectUser: selectedUser)
     }
 }

@@ -27,6 +27,9 @@
 		8BA2EAB12D3C493F00EAAABD /* UserListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EAB02D3C493F00EAAABD /* UserListDetailViewController.swift */; };
 		8BA2EAB32D3C496900EAAABD /* UserListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EAB22D3C496900EAAABD /* UserListDetailViewModel.swift */; };
 		8BA2EAB52D3C498200EAAABD /* UserListDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA2EAB42D3C498200EAAABD /* UserListDetail.storyboard */; };
+		8BA2EAB82D3D0CE100EAAABD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EAB72D3D0CE100EAAABD /* Coordinator.swift */; };
+		8BA2EABA2D3D0CF500EAAABD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EAB92D3D0CF500EAAABD /* AppCoordinator.swift */; };
+		8BA2EABC2D3D0E8600EAAABD /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2EABB2D3D0E8600EAAABD /* UserCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		8BA2EAB02D3C493F00EAAABD /* UserListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDetailViewController.swift; sourceTree = "<group>"; };
 		8BA2EAB22D3C496900EAAABD /* UserListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDetailViewModel.swift; sourceTree = "<group>"; };
 		8BA2EAB42D3C498200EAAABD /* UserListDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserListDetail.storyboard; sourceTree = "<group>"; };
+		8BA2EAB72D3D0CE100EAAABD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8BA2EAB92D3D0CF500EAAABD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8BA2EABB2D3D0E8600EAAABD /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		8BA2EA622D3C2B5000EAAABD /* JSONPlaceholderProject */ = {
 			isa = PBXGroup;
 			children = (
+				8BA2EAB62D3D0CB900EAAABD /* Flows */,
 				8BA2EA952D3C2C6E00EAAABD /* Scenes */,
 				8BA2EA942D3C2C6500EAAABD /* Network */,
 				8BA2EA932D3C2BAD00EAAABD /* App */,
@@ -230,6 +237,16 @@
 				8BA2EAAE2D3C3FEF00EAAABD /* UserEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		8BA2EAB62D3D0CB900EAAABD /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				8BA2EAB72D3D0CE100EAAABD /* Coordinator.swift */,
+				8BA2EAB92D3D0CF500EAAABD /* AppCoordinator.swift */,
+				8BA2EABB2D3D0E8600EAAABD /* UserCoordinator.swift */,
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,11 +384,14 @@
 			files = (
 				8BA2EAA02D3C2EEC00EAAABD /* UserListModel.swift in Sources */,
 				8BA2EA992D3C2CE900EAAABD /* UserListViewController.swift in Sources */,
+				8BA2EAB82D3D0CE100EAAABD /* Coordinator.swift in Sources */,
 				8BA2EAB32D3C496900EAAABD /* UserListDetailViewModel.swift in Sources */,
 				8BA2EAAC2D3C3F0500EAAABD /* UserRepository.swift in Sources */,
 				8BA2EA642D3C2B5000EAAABD /* AppDelegate.swift in Sources */,
+				8BA2EABA2D3D0CF500EAAABD /* AppCoordinator.swift in Sources */,
 				8BA2EA662D3C2B5000EAAABD /* SceneDelegate.swift in Sources */,
 				8BA2EAAF2D3C3FEF00EAAABD /* UserEndpoint.swift in Sources */,
+				8BA2EABC2D3D0E8600EAAABD /* UserCoordinator.swift in Sources */,
 				8BA2EAA22D3C319300EAAABD /* Network.swift in Sources */,
 				8BA2EA9B2D3C2D0D00EAAABD /* UserListViewModel.swift in Sources */,
 				8BA2EAA92D3C3D4900EAAABD /* UserListTableViewModel.swift in Sources */,
